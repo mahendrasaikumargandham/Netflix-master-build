@@ -1,0 +1,72 @@
+.logout {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url("https://images.unsplash.com/photo-1633793675529-58eecb6ea16f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80") center no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.logout_gradient {
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0 , 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%
+    );   
+}
+
+.logout_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 30%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+}
+
+.logout_box > h1 {
+    letter-spacing: 0.4px;
+    font-size: 1.8rem;
+}
+.logout_box > h2 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    letter-spacing: 0.4px;
+}
+.logout_box > h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    letter-spacing: 0.4px;
+}
+.logout_box > button {
+    width: 100%;
+    height: 40px;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    border-radius: 2px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .logout_box {
+        width: 58%;
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, 20%);
+    }
+}
