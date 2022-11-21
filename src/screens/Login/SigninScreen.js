@@ -9,15 +9,13 @@ import { authentication } from "../../firebase";
 function SigninScreen() {
   const [email, setEmail] = useState("");
   const [passwd, setPasswd] = useState("");
-  const register = () => {
+  const register = (e) => {
+    e.preventDefault();
     createUserWithEmailAndPassword(authentication, email, passwd);
   };
-  const login = () => {
-    signInWithEmailAndPassword(authentication, email, passwd)
-      .then((credential) => {
-        console.log(credential);
-      })
-      .catch((error) => console.log(error.message));
+  const login = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(authentication, email, passwd);
   };
 
   return (
@@ -36,9 +34,7 @@ function SigninScreen() {
           type="password"
           placeholder="Password"
         />
-        <button type="submit" onClick={() => login()}>
-          Sign In
-        </button>
+        <button onClick={login}>Sign In</button>
         <div className="signInScreen_help">
           <div className="signInScreen_help_one">
             <input className="signInScreen_help_input" type="checkbox" />{" "}
@@ -48,7 +44,7 @@ function SigninScreen() {
         </div>
         <h4>
           <span className="signInScreen_span">New to Netflix?</span>{" "}
-          <span className="signInScreen_register" onClick={() => register()}>
+          <span className="signInScreen_register" onClick={register}>
             Sign up now.
           </span>
         </h4>
