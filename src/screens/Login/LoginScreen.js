@@ -34,7 +34,7 @@ function LoginScreen() {
             <h2>Watch anywhere. Cancel anytime.</h2>
             <h3>
               Ready to watch? Enter your email to create or restart your
-              membership.
+              membership in Netflix Clone.
             </h3>
             <div className="loginScreen_input">
               <form>
